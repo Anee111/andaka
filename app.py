@@ -20,7 +20,9 @@ def get_weatherdata():
     response = requests.get(url,params=param)
     data = response.json()
     #updating data to see in git and clous
-    return f"data : {data}"
+    city = data['name']
+    return f"data : {data} ,city :{city}"
+    
 
 if __name__ == '__main__':
     app.run(host= "0.0.0.0" , port = 5002)
